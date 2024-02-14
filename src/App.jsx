@@ -7,7 +7,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
-    console.log("first")
+    console.log("copy branch")
   })
 
   return (
