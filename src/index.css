@@ -52,3 +52,16 @@ button:hover {
     transform: scale(1.05);
   }
 }
+
+input{
+  display: flex;
+  border-radius: 5px solid #000;
+  border-width: medium;
+  color: #000;
+}
+
+.card{
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+}

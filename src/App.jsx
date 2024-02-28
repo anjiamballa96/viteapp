@@ -4,7 +4,9 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Navbar from "./components/navbar";
 import Cdef from "./components/abc/Cdef";
-import { Router, Routes } from "react-router-dom";
+import { Route, Router, Routes } from "react-router-dom";
+import Login from "./components/logAndSign/Login";
+import Home from "./components/Home";
 
 function App() {
   const navLinks = [
@@ -70,15 +72,18 @@ function App() {
     <>
       <div className="header-parent">
         <header className="header">
-              <img className="logo" src={reactLogo} alt="logo" />
-              <h2 className="mr-8">React</h2>
-              <Navbar />
-            <Routes>
-            </Routes>
+          <img className="logo" src={reactLogo} alt="logo" />
+          <h2 className="mr-8">React</h2>
+          <Navbar />
         </header>
       </div>
-      <Cdef />
-      <button className="bg-blue-500">Add Division</button>
+      <div className="card bg-[#475569] shadow-lg shadow-current">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+        {/* <button className="bg-blue-500">Add Division</button> */}
+      </div>
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
