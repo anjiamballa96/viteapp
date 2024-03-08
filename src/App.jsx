@@ -7,8 +7,12 @@ import Cdef from "./components/abc/Cdef";
 import { Route, Router, Routes } from "react-router-dom";
 import Login from "./components/logAndSign/Login";
 import Home from "./components/Home";
+import {MdDarkMode} from "react-icons/md"
+import useTheme from "./components/custom/useTheme";
 
 function App() {
+  const [theme,setTheme] = useState("#475569")
+  // const [theme1,changeTheme] = useTheme(true)
   const navLinks = [
     {
       name: "link one",
@@ -69,15 +73,22 @@ function App() {
   });
 
   return (
-    <>
+    <> 
       <div className="header-parent">
-        <header className="header">
-          <img className="logo" src={reactLogo} alt="logo" />
-          <h2 className="mr-8">React</h2>
-          <Navbar />
+        <header className="header flex justify-between">
+          <div className="flex items-center">
+            <img className="logo" src={reactLogo} alt="logo" />
+            <h2 className="mr-8">React</h2>
+            <Navbar />
+          </div>
+          {/* <div className="flex mr-4 cursor-pointer" onClick={() => changeTheme(!theme1)}>
+            <MdDarkMode size={25}/>
+            <h3>Dark</h3>
+          </div> */}
         </header>
       </div>
-      <div className="card bg-[#475569] shadow-lg shadow-current">
+      {/* [#475569] */}
+      <div className={`card bg-[#475569] shadow-lg shadow-current`}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
