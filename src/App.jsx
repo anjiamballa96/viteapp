@@ -7,11 +7,15 @@ import Cdef from "./components/abc/Cdef";
 import { Route, Router, Routes } from "react-router-dom";
 import Login from "./components/logAndSign/Login";
 import Home from "./components/Home";
-import {MdDarkMode} from "react-icons/md"
+import { MdDarkMode } from "react-icons/md";
 import useTheme from "./components/custom/useTheme";
+import About from "./components/About";
+import { FaFacebookF } from "react-icons/fa";
+import { RxTwitterLogo } from "react-icons/rx";
+import { FaInstagram } from "react-icons/fa6";
 
 function App() {
-  const [theme,setTheme] = useState("#475569")
+  const [theme, setTheme] = useState("#475569");
   // const [theme1,changeTheme] = useTheme(true)
   const navLinks = [
     {
@@ -73,7 +77,7 @@ function App() {
   });
 
   return (
-    <> 
+    <>
       <div className="header-parent">
         <header className="header flex justify-between">
           <div className="flex items-center">
@@ -92,7 +96,32 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/about1" element={<About />} />
+          About
         </Routes>
+        <footer className="footer">
+          <div className="copy">&copy; 2024 React Developer</div>
+          <div className="bottom-links">
+            <div className="links">
+              <span>More Info</span>
+              <a href="/">Home</a>
+              <a href="about1">About</a>
+              <a href="#">Contact</a>
+            </div>
+            <div className="links">
+              <span>Social Links</span>
+              <a href="" className="m-1">
+                <FaFacebookF/>
+              </a>
+              <a href="" className="m-1">
+                <RxTwitterLogo/>
+              </a>
+              <a href="" className="m-1">
+                <FaInstagram />
+              </a>
+            </div>
+          </div>
+        </footer>
         {/* <button className="bg-blue-500">Add Division</button> */}
       </div>
       {/* <div>

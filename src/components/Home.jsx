@@ -6,7 +6,7 @@ import { LuNetwork } from "react-icons/lu";
 function Home() {
   return (
     <div>
-      <div class="intro">
+      <div className="intro">
         <h1>React Web Developer</h1>
         <p className="w-3/4 text-balance">
           React is a JavaScript library for building user interfaces.React has
@@ -16,29 +16,30 @@ function Home() {
           complex React-powered app, the links in this section will help you get
           started.
         </p>
-        <button className="text-white bg-blue-500 mt-4">Learn More</button>
+        <a href="https://react.dev/">
+        <button className="text-white bg-blue-500 mt-4">Learn More</button></a>
       </div>
-      <div class="achievements">
-        <div class="work">
-          <i class=""><GrProjects /></i>
-          <p class="work-heading">Projects</p>
-          <p class="work-text">
+      <div className="achievements">
+        <div className="work">
+          <i className=""><GrProjects /></i>
+          <p className="work-heading">Projects</p>
+          <p className="work-text">
             I have worked on many projects and I am very proud of them. I am a
             very good developer and I am always looking for new projects.
           </p>
         </div>
-        <div class="work">
-          <i class=""><GiSkills /></i>
-          <p class="work-heading">Skills</p>
-          <p class="work-text">
+        <div className="work">
+          <i className=""><GiSkills /></i>
+          <p className="work-heading">Skills</p>
+          <p className="work-text">
             I have a lot of skills and I am very good at them. I am very good at
             programming and I am always looking for new skills.
           </p>
         </div>
-        <div class="work">
-          <i class=""><LuNetwork /></i>
-          <p class="work-heading">Network</p>
-          <p class="work-text">
+        <div className="work">
+          <i className=""><LuNetwork /></i>
+          <p className="work-heading">Network</p>
+          <p className="work-text">
             I have a lot of network skills and I am very good at them. I am very
             good at networking and I am always looking for new network skills.
           </p>
